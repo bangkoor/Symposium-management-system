@@ -1,0 +1,94 @@
+input:focus{
+background-color: #FFC;
+}
+select:focus{
+background-color: #FFC;
+}
+#collegename
+{
+	font-family:"Times New Roman", Times, serif;
+	color: #936;
+
+	
+}
+.headl
+{
+	font-family:"Times New Roman", Times, serif;
+	color:#330;
+	}
+h1
+{
+
+font: Georgia, serif;
+color: blue;
+}
+.note {
+color: #333;
+border: 2px dashed #BD8110;
+background-color: #FBF8A9;
+margin-top: 25px;
+margin-bottom: 35px;
+padding: 20px;
+}
+.tabledes
+{
+	
+	border:#600;
+}
+
+body
+{
+font: "Trebuchet MS", Verdana, sans-serif;
+background-color: FF00FF;
+color: 696969;
+}
+#main
+{
+padding: 30px;
+background-color: #FFF;
+border-radius: 0 4px 4px 4px;
+width:1000px;
+
+}
+#update{
+	color: #333;
+border: 2px dashed #BD8110;
+background-color: #FBF8A9;
+margin-top: 25px;
+margin-bottom: 25px;
+padding: 3px;
+width:200px;
+height:50px;
+
+
+}
+ul#menu
+{
+padding: 0px;
+position: relative;
+margin: 0;
+
+background-color: #09F;
+}
+
+ul#menu li
+{
+display: inline;
+
+}
+
+
+ul#menu li a
+{
+background-color:#36F;
+padding: 10px 20px;
+text-decoration: none;
+line-height: 2.8em;
+color:#FFF;
+/*CSS3 properties*/
+border-radius: 4px 4px 0 0;
+}
+ul#menu li a:hover{
+background-color:#3300CC;}
+
+
