@@ -4,25 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 <link  rel="stylesheet" type="text/css" href="form.css" >
+<link rel="stylesheet" type="text/css" href="table_css.css">
 </head>
 
 <body>
-<div align="center">
-<div id="main">
-<table border="0" width="100%">
-<tr><td width="10%"> 
-<img src="saveetha.jpg"/></td>
-<td width="70%"><center><h1>SAVEETHA ENGINEERING COLLEGE</h1></center>
-</td>
-<td><img src="dr.jpg"/></td></tr>
-</table>
-<div align="left">
-<ul id="menu" style="background-color:#0066FF">
-<li ><a href="index.php">Home</a></li>
-<li ><a href="search.php" style="background-color:#3300CC;">Report</a></li>
-</ul>
-</div>
-<div align="left"><a href="search.php"><img src="back.gif" width="80" /></a></div>
+<?php include 'menu.html';?>
 <?php
 include("db.php");
 $college=$_POST['College'];
@@ -39,19 +25,20 @@ else
 echo"<div align=\"left\">
 <font color=\"green\" ><h2>Search Result</h2></font>
 </div>";
-echo "<div id=\"collegename\"><span class=\"headl\">College Name:</span>$college&nbsp;,<span class=\"headl\">Department Name:</span>$dep</div>";
+echo "<div id=\"collegename\"><span class=\"headl\">College Name:</span>$college&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"headl\">Department Name:</span>$dep</div>";
 echo "</br>";
-echo "<table border='1'>
+echo "<div class=\"CSSTableGenerator\" >";
+echo "<table>
 <tr>
-<th>S.NO</th>
-<th>Students Id</th>
-<th>Name</th>
-<th>College</th>
-<th>Department</th>
-<th>Email</th>
-<th>Phone Number</th>
-<th>Amount paid</th>
-<th>Date</th>
+<td>S.NO</td>
+<td>Students Id</td>
+<td>Name</td>
+<td>College</td>
+<td>Department</td>
+<td>Email</td>
+<td>Phone Number</td>
+<td>Amount paid</td>
+<td>Date</td>
 
 </tr>";
 
@@ -77,6 +64,7 @@ while($row = mysql_fetch_array($result))
   $sno++;
   }
 echo "</table>";
+echo "</div>";
 echo"<div align=\"left\">";
 echo"<b>Total</b>"." ".$total;
 echo"</div>";

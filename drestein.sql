@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 15, 2013 at 10:33 PM
+-- Generation Time: Aug 16, 2013 at 03:33 PM
 -- Server version: 5.6.11-log
 -- PHP Version: 5.3.25
 
@@ -114,7 +114,8 @@ INSERT INTO `event_participant` (`pa_id`, `event_id`) VALUES
 (9, 5),
 (9, 9),
 (9, 38),
-(10, 5);
+(10, 5),
+(13, 8);
 
 -- --------------------------------------------------------
 
@@ -125,9 +126,21 @@ INSERT INTO `event_participant` (`pa_id`, `event_id`) VALUES
 CREATE TABLE IF NOT EXISTS `event_winner` (
   `winner_id` int(10) NOT NULL,
   `event_id` int(10) NOT NULL,
+  `prize` varchar(200) NOT NULL,
   KEY `winner_id` (`winner_id`),
   KEY `event_id` (`event_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `event_winner`
+--
+
+INSERT INTO `event_winner` (`winner_id`, `event_id`, `prize`) VALUES
+(9, 5, 'First Prize'),
+(9, 5, 'First Prize'),
+(9, 5, 'Second Prize'),
+(9, 5, 'Second Prize'),
+(10, 5, 'First Prize');
 
 -- --------------------------------------------------------
 
@@ -146,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `participant` (
   `date` varchar(200) NOT NULL,
   `ip` varchar(200) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `participant`
@@ -165,7 +178,8 @@ INSERT INTO `participant` (`id`, `name`, `department`, `college`, `phone`, `emai
 (18, 'gana', 'FASHION TECHNOLOGY', 'Central Institute of Plastic Engineering and Technology', '9884858702', 'trkrameshkumar@gmail.com', 50, '22-8-2013', '127.0.0.1'),
 (19, 'asdfasdf', 'METALLURGICAL ENGINEERING', 'D.M.I. College of Engineering', '9884858702', 'trkrameshkumar@gmail.com', 50, '22-8-2013', '127.0.0.1'),
 (20, 'chandru', 'INSTRUMENTATION AND CONTROL', 'C.Abdul Hakeem College of Engineering and Technology', '9884858702', 'trkrameshkumar@gmail.com', 50, '23-8-2013', '127.0.0.1'),
-(21, 'thisisi', 'FASHION TECHNOLOGY', 'College of Engineering Guindy', '9884858702', 'trkramesh@gmail.com', 50, '15-8-2013', '127.0.0.1');
+(21, 'thisisi', 'FASHION TECHNOLOGY', 'College of Engineering Guindy', '9884858702', 'trkramesh@gmail.com', 50, '15-8-2013', '127.0.0.1'),
+(22, 'ramesh', 'MASTER OF COMPUTER APPLICATION', 'D.M.I. College of Engineering', '919774857575', 'thennarasu199@gmail.com', 50, '16-8-2013', '127.0.0.1');
 
 -- --------------------------------------------------------
 
@@ -206,14 +220,15 @@ CREATE TABLE IF NOT EXISTS `user` (
   `department_id` int(10) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `department_id` (`department_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `department_id`) VALUES
-(2, 'secmca', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1);
+(2, 'secmca', 'd033e22ae348aeb5660fc2140aec35850c4da997', 1),
+(3, 'secmba', 'd033e22ae348aeb5660fc2140aec35850c4da997', 2);
 
 --
 -- Constraints for dumped tables
