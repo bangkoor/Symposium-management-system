@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Drestine'13</title>
 <script language="javascript">
 function addDate(){
 date = new Date();
@@ -151,12 +152,12 @@ echo "\nStudent ID is : " . mysql_insert_id()."</div>";
 <option>Dhaanish Ahmed College of Engineering</option>
 <option>Dhanalakshmi College of Engineering</option>
 <option>Dhanalakshmi Srinivasan College of Engineering and Technology</option>
-<option>Dr.Paulïs Engineering College</option>
+<option>Dr.Paulï¿½s Engineering College</option>
 <option>E.S.College of Engineering and Technology</option>
 <option>Easwari Engineering College</option>
 <option>G.G.R. College of Engineering</option>
 <option>G.K.M. College of Engineering and Technology</option>
-<option>Ganadipathy Tulsiïs Engineering College</option>
+<option>Ganadipathy Tulsiï¿½s Engineering College</option>
 <option>Gojan School of Business & Technology</option>
 <option>Hindustan College of Engineering</option>
 <option>I.F.E.T. College of Engineering</option>

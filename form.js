@@ -40,7 +40,7 @@ function notEmpty(elem, helperMsg){
 }
 
 function isAlphabet(elem, helperMsg){
-	var alphaExp = /^[a-zA-Z]+$/;
+	var alphaExp = /^[a-zA-Z ]*$/;
 	if(elem.value.match(alphaExp)){
 		return true;
 	}else{
