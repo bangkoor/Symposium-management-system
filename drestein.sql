@@ -17,12 +17,12 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
+-- Database: `drestein`
+--
+CREATE DATABASE IF NOT EXISTS `drestein` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `drestein`;
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `event`
---
 
 CREATE TABLE IF NOT EXISTS `event` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
